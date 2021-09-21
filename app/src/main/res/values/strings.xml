@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">LaLiga</string>
+    <string name="string_teams">Teams</string>
+    <string name="string_events">Events</string>
+    <string name="string_stadium_name">Stadium: %1s</string>
+    <string name="string_vs">vs</string>
+    <string name="string_foundation_year">Foundation Year (%1d)</string>
+
+    <!-- Content Descriptions -->
+    <string name="content_description_logo_la_liga">Logo of App La Liga</string>
+    <string name="content_description_team_stadium">Image of stadium</string>
+    <string name="content_description_team_logo">Image of logo</string>
+    <string name="content_description_match_thumb">Thumb of match</string>
+    <string name="content_description_facebook_buttom">Facebook button</string>
+    <string name="content_description_instagram_buttom">Instagram button</string>
+    <string name="content_description_twitter_buttom">Twitter button</string>
+    <string name="content_description_website_buttom">Website button</string>
+    <string name="content_description_team_jersey">Jersey of team</string>
+
+    <!-- Arrays -->
+    <string-array name="leagues_array">
+        <item>Spanish La Liga</item>
+        <item>English Premier League</item>
+        <item>German Bundesliga</item>
+        <item>Italian Serie A</item>
+    </string-array>
+
+</resources>

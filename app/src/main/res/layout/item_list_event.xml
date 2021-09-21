@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view_underline"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_view_match_thumb"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description_match_thumb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_match_thumb"
+        app:layout_constraintStart_toEndOf="@+id/image_view_match_thumb"
+        app:layout_constraintTop_toTopOf="@+id/image_view_match_thumb">
+
+        <TextView
+            android:id="@+id/textview_home_team_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            tools:text="Home Team" />
+
+        <TextView
+            android:id="@+id/text_view_vs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/string_vs"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/text_view_away_team_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            tools:text="Away Team" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_match_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="17-09-1997" />
+
+    <TextView
+        android:id="@+id/text_view_match_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_match_date"
+        app:layout_constraintStart_toStartOf="@+id/text_view_match_date"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_match_date"
+        tools:text="16:00" />
+</androidx.constraintlayout.widget.ConstraintLayout>

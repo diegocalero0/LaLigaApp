@@ -18,8 +18,6 @@ class HomeViewModel @ViewModelInject constructor(
 ): ViewModel() {
 
     val teams = MutableLiveData<List<TeamModel>>()
-    val showSnackbar: MutableLiveData<Boolean> = MutableLiveData(false)
-    val snackBarMessage = MutableLiveData<String>()
 
     fun listTeams(leagueName: String) {
         viewModelScope.launch(Dispatchers.IO) {
@@ -28,8 +26,6 @@ class HomeViewModel @ViewModelInject constructor(
                 teams.postValue(teamsList)
             } catch (exception: Exception) {
                 exception.printStackTrace()
-                showSnackbar.postValue(true)
-                snackBarMessage.postValue(exception.message)
             }
         }
     }

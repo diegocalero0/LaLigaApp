@@ -18,8 +18,6 @@ class TeamDetailViewModel @ViewModelInject constructor(
         @Assisted private val savedStateHandle: SavedStateHandle): ViewModel() {
 
     val events = MutableLiveData<List<EventModel>>()
-    val showSnackbar: MutableLiveData<Boolean> = MutableLiveData(false)
-    val snackBarMessage = MutableLiveData<String>()
     val team: TeamModel? = savedStateHandle["team"]
 
     init {
@@ -33,8 +31,6 @@ class TeamDetailViewModel @ViewModelInject constructor(
                 events.postValue(eventsList)
             } catch (exception: Exception) {
                 exception.printStackTrace()
-                showSnackbar.postValue(true)
-                snackBarMessage.postValue(exception.message)
             }
         }
     }
